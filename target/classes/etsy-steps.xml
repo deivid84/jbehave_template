@@ -11,19 +11,11 @@
     <constructor-arg ref="driverProvider"/>
   </bean>
 
-  <bean id="lifecycleSteps" class="com.globant.david_goldes.template.steps.LifecycleSteps">
-    <constructor-arg ref="driverProvider"/>
-  </bean>
-
-  <bean id="journaledSteps" class="com.globant.david_goldes.template.steps.JournaledStoriesSteps">
-    <constructor-arg ref="driverProvider"/>
-  </bean>
-
   <bean id="pageFactory" class="com.globant.david_goldes.template.pages.PageFactory">
      <constructor-arg ref="driverProvider"/>
   </bean>  
   
-  <bean id="etsySteps" class="com.globant.david_goldes.template.steps.EtsyDotComSteps">
+  <bean id="templateSteps" class="com.globant.david_goldes.template.steps.TemplateSteps">
      <constructor-arg ref="pageFactory"/>
   </bean>  
 

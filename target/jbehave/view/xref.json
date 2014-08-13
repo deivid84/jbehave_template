@@ -1,8 +1,62 @@
 {"xref": {
-  "whenMade": 1407943453243,
+  "whenMade": 1407957984738,
   "createdBy": "JBehave",
   "metaFilter": "",
-  "meta": [],
-  "stories": [],
-  "stepMatches": []
+  "meta": [
+    "category=browsing",
+    "color=red"
+  ],
+  "stories": [
+    {
+      "description": "Access Budweiser",
+      "narrative": "",
+      "name": "age_gate.story",
+      "path": "age_gate.story",
+      "html": "age_gate.html",
+      "meta": "category=browsing\ncolor=red\n",
+      "scenarios": "Scenario:Accessing the Budweiser Age Gate\nGiven I am on budweisertours.com\nWhen I enter a legal age\nThen the main page will be displayed\n\n\n",
+      "passed": true,
+      "pending": false,
+      "started": 1407957969257,
+      "duration": 14929
+    }
+  ],
+  "stepMatches": [
+    {
+      "type": "WHEN",
+      "annotatedPattern": "I enter a legal age",
+      "resolvedPattern": "I\\s+enter\\s+a\\s+legal\\s+age",
+      "usages": [
+        {
+          "story": "age_gate.story",
+          "scenario": "Accessing the Budweiser Age Gate",
+          "step": "When I enter a legal age"
+        }
+      ]
+    },
+    {
+      "type": "THEN",
+      "annotatedPattern": "the main page will be displayed",
+      "resolvedPattern": "the\\s+main\\s+page\\s+will\\s+be\\s+displayed",
+      "usages": [
+        {
+          "story": "age_gate.story",
+          "scenario": "Accessing the Budweiser Age Gate",
+          "step": "Then the main page will be displayed"
+        }
+      ]
+    },
+    {
+      "type": "GIVEN",
+      "annotatedPattern": "I am on budweisertours.com",
+      "resolvedPattern": "I\\s+am\\s+on\\s+budweisertours\\.com",
+      "usages": [
+        {
+          "story": "age_gate.story",
+          "scenario": "Accessing the Budweiser Age Gate",
+          "step": "Given I am on budweisertours.com"
+        }
+      ]
+    }
+  ]
 }}
