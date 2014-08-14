@@ -19,5 +19,8 @@
      <constructor-arg ref="pageFactory"/>
   </bean>  
 
+  <bean id="browserManager" class="com.globant.david_goldes.template.browser_manager.BrowserManager">
+     <constructor-arg ref="driverProvider"/>
+  </bean> 
 
 </beans>

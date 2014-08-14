@@ -9,28 +9,16 @@ import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.xpath;
 import static org.seleniumhq.selenium.fluent.Period.secs;
 
-public class Home extends FluentWebDriverPage {
+public class Home extends BaseFluentPage {
 
-    public Home(WebDriverProvider webDriverProvider) {
-        super(webDriverProvider);
+	private static final String URL = "http://www.budweisertours.com/";
+	
+    public Home(WebDriverProvider webDriverProvider, PageFactory pageFactory) {
+        super(webDriverProvider, pageFactory);
     }
 
     public void go() {
-        get("http://www.etsy.com");
-    }
-
-    public void go(String section) {
-        go();
-        link(xpath("@title = '" + section + "'")).click();
-    }
-
-    public void search(String thing) {
-        input(id("search-query")).sendKeys(thing);
-        button(id("search_submit")).click();
-    }
-
-    public void goToBuySection() {
-        link(linkText("Buy")).click();
+        get(URL);
     }
     
     public boolean isHomePage() {    	    	

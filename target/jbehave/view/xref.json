@@ -1,5 +1,5 @@
 {"xref": {
-  "whenMade": 1407957984738,
+  "whenMade": 1408031234198,
   "createdBy": "JBehave",
   "metaFilter": "",
   "meta": [
@@ -10,15 +10,54 @@
     {
       "description": "Access Budweiser",
       "narrative": "",
-      "name": "age_gate.story",
-      "path": "age_gate.story",
-      "html": "age_gate.html",
+      "name": "age_gate_enter_site_close_and_reopen.story",
+      "path": "age_gate_enter_site_close_and_reopen.story",
+      "html": "age_gate_enter_site_close_and_reopen.html",
       "meta": "category=browsing\ncolor=red\n",
-      "scenarios": "Scenario:Accessing the Budweiser Age Gate\nGiven I am on budweisertours.com\nWhen I enter a legal age\nThen the main page will be displayed\n\n\n",
+      "scenarios": "Scenario:Accessing the Budweiser Age Gate with a legal age, closing the tab and reentering the site\nGiven I am on budweisertours.com\nWhen I enter a legal age, close the tab and enter the site again\nThen the main page will be displayed\n\n\n",
       "passed": true,
       "pending": false,
-      "started": 1407957969257,
-      "duration": 14929
+      "started": 1408031176885,
+      "duration": 20855
+    },
+    {
+      "description": "Access Budweiser",
+      "narrative": "",
+      "name": "age_gate_with_incorrect_age.story",
+      "path": "age_gate_with_incorrect_age.story",
+      "html": "age_gate_with_incorrect_age.html",
+      "meta": "category=browsing\ncolor=red\n",
+      "scenarios": "Scenario:Accessing the Budweiser Age Gate with an incorrect date\nGiven I am on budweisertours.com\nWhen I enter an incorrect date\nThen an error will be displayed\n\n\n",
+      "passed": true,
+      "pending": false,
+      "started": 1408031197757,
+      "duration": 11675
+    },
+    {
+      "description": "Access Budweiser",
+      "narrative": "",
+      "name": "age_gate_with_legal_age.story",
+      "path": "age_gate_with_legal_age.story",
+      "html": "age_gate_with_legal_age.html",
+      "meta": "category=browsing\ncolor=red\n",
+      "scenarios": "Scenario:Accessing the Budweiser Age Gate with a legal age\nGiven I am on budweisertours.com\nWhen I enter a legal age\nThen the main page will be displayed\n\n\n",
+      "passed": true,
+      "pending": false,
+      "started": 1408031209447,
+      "duration": 12473
+    },
+    {
+      "description": "Access Budweiser",
+      "narrative": "",
+      "name": "age_gate_with_non_legal_age.story",
+      "path": "age_gate_with_non_legal_age.story",
+      "html": "age_gate_with_non_legal_age.html",
+      "meta": "category=browsing\ncolor=red\n",
+      "scenarios": "Scenario:Accessing the Budweiser Age Gate with a non legal age\nGiven I am on budweisertours.com\nWhen I enter a non legal age\nThen an error will be displayed\n\n\n",
+      "passed": true,
+      "pending": false,
+      "started": 1408031221937,
+      "duration": 11617
     }
   ],
   "stepMatches": [
@@ -28,9 +67,50 @@
       "resolvedPattern": "I\\s+enter\\s+a\\s+legal\\s+age",
       "usages": [
         {
-          "story": "age_gate.story",
-          "scenario": "Accessing the Budweiser Age Gate",
+          "story": "age_gate_with_legal_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with a legal age",
           "step": "When I enter a legal age"
+        }
+      ]
+    },
+    {
+      "type": "THEN",
+      "annotatedPattern": "an error will be displayed",
+      "resolvedPattern": "an\\s+error\\s+will\\s+be\\s+displayed",
+      "usages": [
+        {
+          "story": "age_gate_with_incorrect_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with an incorrect date",
+          "step": "Then an error will be displayed"
+        },
+        {
+          "story": "age_gate_with_non_legal_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with a non legal age",
+          "step": "Then an error will be displayed"
+        }
+      ]
+    },
+    {
+      "type": "WHEN",
+      "annotatedPattern": "I enter a legal age, close the tab and enter the site again",
+      "resolvedPattern": "I\\s+enter\\s+a\\s+legal\\s+age,\\s+close\\s+the\\s+tab\\s+and\\s+enter\\s+the\\s+site\\s+again",
+      "usages": [
+        {
+          "story": "age_gate_enter_site_close_and_reopen.story",
+          "scenario": "Accessing the Budweiser Age Gate with a legal age, closing the tab and reentering the site",
+          "step": "When I enter a legal age, close the tab and enter the site again"
+        }
+      ]
+    },
+    {
+      "type": "WHEN",
+      "annotatedPattern": "I enter a non legal age",
+      "resolvedPattern": "I\\s+enter\\s+a\\s+non\\s+legal\\s+age",
+      "usages": [
+        {
+          "story": "age_gate_with_non_legal_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with a non legal age",
+          "step": "When I enter a non legal age"
         }
       ]
     },
@@ -40,9 +120,26 @@
       "resolvedPattern": "the\\s+main\\s+page\\s+will\\s+be\\s+displayed",
       "usages": [
         {
-          "story": "age_gate.story",
-          "scenario": "Accessing the Budweiser Age Gate",
+          "story": "age_gate_with_legal_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with a legal age",
           "step": "Then the main page will be displayed"
+        },
+        {
+          "story": "age_gate_enter_site_close_and_reopen.story",
+          "scenario": "Accessing the Budweiser Age Gate with a legal age, closing the tab and reentering the site",
+          "step": "Then the main page will be displayed"
+        }
+      ]
+    },
+    {
+      "type": "WHEN",
+      "annotatedPattern": "I enter an incorrect date",
+      "resolvedPattern": "I\\s+enter\\s+an\\s+incorrect\\s+date",
+      "usages": [
+        {
+          "story": "age_gate_with_incorrect_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with an incorrect date",
+          "step": "When I enter an incorrect date"
         }
       ]
     },
@@ -52,8 +149,23 @@
       "resolvedPattern": "I\\s+am\\s+on\\s+budweisertours\\.com",
       "usages": [
         {
-          "story": "age_gate.story",
-          "scenario": "Accessing the Budweiser Age Gate",
+          "story": "age_gate_enter_site_close_and_reopen.story",
+          "scenario": "Accessing the Budweiser Age Gate with a legal age, closing the tab and reentering the site",
+          "step": "Given I am on budweisertours.com"
+        },
+        {
+          "story": "age_gate_with_non_legal_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with a non legal age",
+          "step": "Given I am on budweisertours.com"
+        },
+        {
+          "story": "age_gate_with_legal_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with a legal age",
+          "step": "Given I am on budweisertours.com"
+        },
+        {
+          "story": "age_gate_with_incorrect_age.story",
+          "scenario": "Accessing the Budweiser Age Gate with an incorrect date",
           "step": "Given I am on budweisertours.com"
         }
       ]

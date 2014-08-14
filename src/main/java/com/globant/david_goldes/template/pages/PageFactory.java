@@ -11,11 +11,11 @@ public class PageFactory {
     }
 
     public Home newHome() {
-        return new Home(webDriverProvider);
+        return new Home(webDriverProvider, this);
     }
     
     public AgeGate newAgeGate() {
-        return new AgeGate(webDriverProvider);
+        return new AgeGate(webDriverProvider, this);
     }
 
 }
