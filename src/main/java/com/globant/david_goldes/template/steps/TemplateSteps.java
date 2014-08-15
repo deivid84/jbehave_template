@@ -1,7 +1,5 @@
 package com.globant.david_goldes.template.steps;
 
-import java.util.Date;
-
 import org.apache.commons.lang.IllegalClassException;
 import org.hamcrest.Matchers;
 import org.jbehave.core.annotations.Alias;
