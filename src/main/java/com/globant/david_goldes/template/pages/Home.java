@@ -7,12 +7,12 @@ import static org.openqa.selenium.By.id;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.xpath;
 
-public class Home extends FluentWebDriverPage {
+public class Home extends BaseFluentPage {
 
 	private static final String URL = "http://www.etsy.com";
 	
     public Home(WebDriverProvider webDriverProvider, PageFactory pageFactory) {
-        super(webDriverProvider);
+        super(webDriverProvider, pageFactory);
     }
 
     public void go() {
