@@ -13,4 +13,12 @@ public class PageFactory {
     public Home newHome() {
         return new Home(webDriverProvider, this);
     }
+    
+    public SignIn newSignIn() {
+    	return new SignIn(webDriverProvider, this);
+    }
+    
+    public SignOut newSignOut() {
+    	return new SignOut(webDriverProvider, this);
+    }
 }

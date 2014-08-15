@@ -1,0 +1,20 @@
+Select a flight to Cheaptickets.com
+
+Meta:
+@category advanced
+@color red
+
+Narrative: 
+
+In order to book a flight
+As a user
+I have search the available flights
+
+Scenario: Search for a flight
+
+Given I am browsing Cheaptickets.com
+When I select the flight only option
+
+And I fill the login form with my email test22@test.com and password 123456
+And I select the logout option
+Then I should be logged out

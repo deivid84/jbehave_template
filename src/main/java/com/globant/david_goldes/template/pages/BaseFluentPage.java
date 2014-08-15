@@ -4,6 +4,7 @@ import org.jbehave.web.selenium.FluentWebDriverPage;
 import org.jbehave.web.selenium.WebDriverProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,4 +26,9 @@ public class BaseFluentPage extends FluentWebDriverPage{
 	    }
 	    return true;
     }
+	
+	protected void waitForElementToBePresent(By by, int seconds){
+		WebDriverWait wait = new WebDriverWait(getDriverProvider().get(), seconds);
+		wait.until(ExpectedConditions.presenceOfElementLocated(by));
+	}
 }
