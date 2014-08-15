@@ -9,25 +9,13 @@ import static org.openqa.selenium.By.xpath;
 
 public class Home extends FluentWebDriverPage {
 
-    public Home(WebDriverProvider webDriverProvider) {
+	private static final String URL = "http://www.etsy.com";
+	
+    public Home(WebDriverProvider webDriverProvider, PageFactory pageFactory) {
         super(webDriverProvider);
     }
 
     public void go() {
-        get("http://www.etsy.com");
-    }
-
-    public void go(String section) {
-        go();
-        link(xpath("@title = '" + section + "'")).click();
-    }
-
-    public void search(String thing) {
-        input(id("search-query")).sendKeys(thing);
-        button(id("search_submit")).click();
-    }
-
-    public void goToBuySection() {
-        link(linkText("Buy")).click();
-    }
+        get(URL);
+    }    
 }
