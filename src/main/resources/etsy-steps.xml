@@ -20,7 +20,8 @@
   </bean>  
 
   <bean id="browserManager" class="com.globant.david_goldes.template.browser_manager.BrowserManager">
-     <constructor-arg ref="driverProvider"/>
+     <constructor-arg index="0" ref="driverProvider"/>
+     <constructor-arg index="1" ref="pageFactory"/>
   </bean> 
 
 </beans>

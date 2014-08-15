@@ -14,5 +14,5 @@ I need to provide a legal age
 Scenario: Accessing the Budweiser Age Gate with an incorrect date
 
 Given I am on budweisertours.com
-When I enter an incorrect date
+When I enter an incorrect date, feb 31 of 1986
 Then an error will be displayed

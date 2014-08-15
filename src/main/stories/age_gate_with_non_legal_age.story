@@ -14,5 +14,5 @@ I need to provide a legal age
 Scenario: Accessing the Budweiser Age Gate with a non legal age
 
 Given I am on budweisertours.com
-When I enter a non legal age
+When I enter a non legal age, feb 03 of 2003
 Then an error will be displayed

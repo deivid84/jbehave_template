@@ -24,7 +24,7 @@ public class AgeGate extends BaseFluentPage{
         get(URL);
     }
 	
-	public BaseFluentPage selectBirthDate(String month, String day, String year){
+	public BaseFluentPage selectBirthDate(String month, String day, String year){		
 		selectMonth(month);
 		selectDay(day);
 		selectYear(year);

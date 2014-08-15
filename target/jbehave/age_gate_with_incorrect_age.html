@@ -9,7 +9,17 @@
 <div class="scenario">
 <h2>Scenario: Accessing the Budweiser Age Gate with an incorrect date</h2>
 <div class="step successful">Given I am on budweisertours.com</div>
-<div class="step successful">When I enter an incorrect date</div>
-<div class="step successful">Then an error will be displayed</div>
+<div class="step successful">When I enter an incorrect date, <span class="step parameter">02/31/1986</span></div>
+<div class="step failed">When I enter date $date <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.jbehave.core.steps.ParameterConverters$ParameterConvertionFailed: Failed to convert value $date with date format dd/MM/yyyy</span><br/><a color="black" target="jb_scn_shot" href="../screenshots/failed-scenario-9ff97f7c-07fe-4275-bf3b-896bbd6945ca.png"><img src="images/failing_screenshot.png" alt="failing screenshot"/></a></div>
+<div class="step notPerformed">Then an error will be displayed <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">org.jbehave.core.steps.ParameterConverters$ParameterConvertionFailed: Failed to convert value $date with date format dd/MM/yyyy
+	at org.jbehave.core.steps.ParameterConverters$DateConverter.convertValue(ParameterConverters.java:467)
+	at org.jbehave.core.steps.ParameterConverters.convert(ParameterConverters.java:151)
+	at org.jbehave.core.steps.StepCreator.convertParameterValues(StepCreator.java:277)
+	at org.jbehave.core.steps.StepCreator.access$1100(StepCreator.java:35)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.parametriseStep(StepCreator.java:588)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:547)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:531)
+...</pre>
 </div>
 </div>
